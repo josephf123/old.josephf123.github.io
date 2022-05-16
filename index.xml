@@ -9,7 +9,17 @@
       <link>https://josephf123.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 26 Mar 2019 08:47:11 +0100</lastBuildDate><atom:link href="https://josephf123.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 May 2022 02:17:11 +0100</lastBuildDate><atom:link href="https://josephf123.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Wifi Box</title>
+      <link>https://josephf123.github.io/posts/wifi_box/</link>
+      <pubDate>Mon, 16 May 2022 02:17:11 +0100</pubDate>
+      
+      <guid>https://josephf123.github.io/posts/wifi_box/</guid>
+      <description>Wifi Blog post TLDR: I made a device that logs all the wifi traffic and maps it out. It can also do some hacking stuff.
+Intro I knew I wanted to make something. I love making stuff. Making a physical thing would be awesome, something that was small and discrete, something that would make me feel like a spy hiding in plain sight. At the time of this spell of inspiration, I was learning about wifi and its capabilities at uni.</description>
+    </item>
+    
     <item>
       <title>My First Post</title>
       <link>https://josephf123.github.io/posts/first_post/</link>
