@@ -20,7 +20,7 @@ params:
   author: Me
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
-  DateFormat: "January 2, 2006"
+  DateFormat: "2 January, 2006"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
 
@@ -73,7 +73,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Hi there \U0001F44B "
-    Content: Welcome to my blog
+    Content: Welcome to my blog. Here I will share projects that I have made and things that interest me.
 
   socialIcons:
     - name: github
