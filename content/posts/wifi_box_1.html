@@ -4,15 +4,15 @@ date: 2022-05-16T02:17:11+01:00
 draft: false
 ---
 
-**TLDR:** I made a device that logs all the wifi traffic and maps it out. It can also do some hacking stuff.
+<b>TLDR:</b> I made a device that logs all the wifi traffic and maps it out. It can also do some hacking stuff.
 
-<h2> Intro </h2>
+<h2 style="color: #3864BC;"> Intro </h2>
 
 I knew I wanted to make something. I love making stuff. Making a physical thing would be awesome, something that was small and discrete, something that would make me feel like a spy hiding in plain sight. At the time of this spell of inspiration, I was learning about wifi and its capabilities at uni. I combined these ideas together to make a device that can log and and map any device that is using wifi. This means that I can track any phone or laptop even if it is not connected to wifi, the wifi just needs to be turned on on the device. The making of this project can be broken up into four parts. 1. Create the physical device that is capable of searching for wifi devices and capturing network traffic while also knowing its physical location 2. Create a script that will allow the device to log information about wifi devices acompanied by information about its physical location. 3. Create a simple user interface to plot the information recorded by the device. 4. Add some hacking features to feel cool. Simple.
 
 A discovery I figured out about wifi protocol was that heaps of information is constantly being transmitted to everyone. Whenever the wifi on your phone is turned on, your phone is constantly sending a signal to anyone that will listen, all about itself including it’s MAC address (unique id) and all the wifi connections it has made in the past. Because of this, we can listen in and take this data. That is the weakness that I am exploiting with this device.
 
-<h2> Part 0: Research and planning </h2>
+<h2 style="color: #3864BC;"> Part 0: Research and planning </h2>
 
 This first bit was quite difficult. I had to find tools that could help me achieve the goals mentioned above while also being small and discrete. 
 
@@ -22,13 +22,13 @@ I also had to have the device’s physical location at all times, the one soluti
 
 The last thing I needed was a power source. The device needed to be small and I didn’t want to have to connect it to a powerpoint or a computer, I really wanted it to be self contained. A cheap solution that I found which was also very accesible was the Keji 2000mAh Powerbank.
 
-<h2> Part 1: Setup </h2>
+<h2 style="color: #3864BC;"> Part 1: Setup </h2>
 
 This process took an extremely long amount of time. I had to find all the equipment and items that I needed for the device and I had to setup the raspberry pi to correctly work with everything.
 
 I created a sketch of where all the parts would go, this would allow me to visualise where everything would go and help create dimensions for the device’s housing.
 
-![Drawing schematic](/drawing%20schematic.jpeg)
+<img src="/drawing%20schematic.jpeg" alt="Drawing schematic">
 
 I had to boot an operating system called Kali Linux onto the raspberry pi to allow for the tools neccessary in wifi monitoring and hacking. On top of that I had to download a kernel that allowed for me to use wifi myself while scanning other network traffic.
 
@@ -36,15 +36,15 @@ Connecting the GPS to the raspberry pi was quite simple, all it required was sol
 
 The housing for the device went through many iterations. I decided to use Fusion 360 to design it since I had quite a bit of experience using that. Throughout the project I created multiple iterations that fixed past mistakes and made some improvements. 
 
-*Here is a photo of the iterations up until now*.
+<i>Here is a photo of the iterations up until now</i>.
 
-![All housing](/all%20housings.jpg)
+<img src="/all%20housings.jpg" alt="All housing">
 
-*Here is the components combined inside its housing*
+<i>Here is the components combined inside its housing</i>
 
-![All together](/all%20together.jpg)
+<img src="/all%20together.jpg" alt="All together">
 
-<h2> Part 2: Writing the script </h2>
+<h2 style="color: #3864BC;"> Part 2: Writing the script </h2>
 
 My script had to have the following capabilities:
 
@@ -59,17 +59,17 @@ Initially I was planning write all of this in bash, bash is a scripting language
 
 Next, I had to find a way to automate this process. Since I can’t run the device constantly as turning it off would lead to all the data being lost, I instead decided to run the script for 2 minutes at a time and just re-run the program every 2 minutes. A program that runs in the background is called a daemon and to make your program into a daemon, you have to use a feature called “cron”. By editing the crontab, you can make programs run at certain intervals, every minute, every hour etc. I edited the crontab file to run my program every 2 minutes.
 
-<h2> Part 3: Mapping the information </h2>
+<h2 style="color: #3864BC;"> Part 3: Mapping the information </h2>
 
 My goal for this part was to have a simple interface that allows a user to see all the wifi devices that have been logged and also display its physical location. To achieve this goal, I used some simple HTML, Javascript and the Google Maps API. Once I had the data in a file on my computer, I converted the csv file into a json file (a format more friendly for the API), separated the data based on their location and then plotted in on an interactive map. When navigating the interface, clicking a marker makes all the information about that location pops up, including all the wifi devices, their device name, privacy protocol etc.
 
-![All Access Points](/all%20aps.png)
+<img src="/all%20aps.png" alt="All Access Points on map">
 
 Also, next to this is a table that contains every single wifi device (routers and clients). Not only this, but you can also search through all these devices to find specific information about the dataset i.e how many devices are Optus devices, which area has the most wifi devices or which devices have bad privacy protocols.
 
-![blurred sc](/blurred%20sc.png)
+<img src="/blurred%20sc.png" alt="Table of all APs">
 
-<h2> Part 4: Actual hacking </h2>
+<h2 style="color: #3864BC;"> Part 4: Actual hacking </h2>
 
 *** Disclaimer: All the stuff below was not actually performed. It is illegal to break into another person’s device without consent. Don’t do it. Plz ***
 
