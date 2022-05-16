@@ -1,10 +1,8 @@
 ---
-title: "The Wifi Box"
+title: "The Wifi Box ⚡"
 date: 2022-05-16T02:17:11+01:00
 draft: false
 ---
-
-# Wifi Blog post
 
 **TLDR:** I made a device that logs all the wifi traffic and maps it out. It can also do some hacking stuff.
 
