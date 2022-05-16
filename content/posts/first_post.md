@@ -8,4 +8,4 @@ draft: false
 
 Woah this is so coooooooool
 
-![image alt text](/resources/_gen/images/all%20aps.png)
+![image alt text](/all%20aps.png)
