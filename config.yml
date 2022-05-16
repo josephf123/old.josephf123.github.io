@@ -13,7 +13,7 @@ minify:
   minifyOutput: true
 
 params:
-  # env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: JOSEP_F
   description: ""
   keywords: [Blog, Portfolio, PaperMod]
