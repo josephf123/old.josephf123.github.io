@@ -10,7 +10,7 @@ draft: false
 
 I knew I wanted to make something. I love making stuff. Making a physical thing would be awesome, something that was small and discrete, something that would make me feel like a spy hiding in plain sight. At the time of this spell of inspiration, I was learning about wifi and its capabilities at uni. I combined these ideas together to make a device that can log and and map any device that is using wifi. This means that I can track any phone or laptop even if it is not connected to wifi, the wifi just needs to be turned on on the device. The making of this project can be broken up into four parts. <b style="color: #F49F0A;">1.</b> Create the physical device that is capable of searching for wifi devices and capturing network traffic while also knowing its physical location <b style="color: #F49F0A;">2.</b> Create a script that will allow the device to log information about wifi devices acompanied by information about its physical location. <b style="color: #F49F0A;">3.</b> Create a simple user interface to plot the information recorded by the device. <b style="color: #F49F0A;">4.</b> Add some hacking features to feel cool. Simple.<br><br>
 
-A discovery I figured out about wifi protocol was that heaps of information is constantly being transmitted to everyone. Whenever the wifi on your phone is turned on, your phone is constantly sending a signal to anyone that will listen, all about itself including it’s MAC address (unique id) and all the wifi connections it has made in the past. Because of this, we can listen in and take this data. That is the weakness that I am exploiting with this device.<br>
+A discovery I figured out about wifi protocol was that heaps of information is constantly being transmitted to everyone. Whenever the wifi on your phone is turned on, your phone is constantly sending a signal to anyone that will listen, all about itself including it’s MAC address (unique id) and all the wifi connections it has made in the past. Because of this, we can listen in and take this data.<br>
 
 <h2 style="color: #3864BC;"> Part 0: Research and planning </h2>
 
@@ -46,14 +46,14 @@ The housing for the device went through many iterations. I decided to use Fusion
 
 <h2 style="color: #3864BC;"> Part 2: Writing the script </h2>
 
-My script had to have the following capabilities:
+My script had to have the following capabilities:<br>
 
 - wait until GPS data is collected<br>
 - capture wifi data in a certain time interval<br>
 - add gps data to wifi data<br>
 - save to file<br><br>
 
-*** this bit is a bit more technical, skip if bored ***<br><br>
+*** this bit is a bit more technical ***<br><br>
 
 
 Initially I was planning write all of this in bash, bash is a scripting language and allows execution of commands you would usually write on the command line. Since I was executing “airodump-ng” as the main command, I thought that using bash would be easy. Nope. Trying to parse data from the GPS and also append and edit wifi and gps data was a nightmare. I tried desperately to get it to work to no avail. Instead I switched over to python, a language I was familiar with. Using a library called subprocess, I was able to execute lines of code as if I was writing in the terminal. I was also easily able to manipulate the data, allowing the gps data to be added to the wifi data and then appending this information to the end of a file.<br><br>
@@ -73,7 +73,7 @@ Also, next to this is a table that contains every single wifi device (routers an
 
 <h2 style="color: #3864BC;"> Part 4: Actual hacking </h2>
 
-*** Disclaimer: All the stuff below was not actually performed. It is illegal to break into another person’s device without consent. Don’t do it. Plz ***<br><br>
+*** Disclaimer: All the stuff below was not actually performed. It is illegal to break into another person’s device without consent. Don’t do it ***<br><br>
 
 Now that all the creepy stalker, mass surveillance stuff is done, lets do some hacking! (Not really because it is illegal and I don’t want to go to jail)<br><br>
 
