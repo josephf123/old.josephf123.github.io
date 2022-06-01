@@ -6,7 +6,7 @@ code {
 }
 
 body {
-    font-family: "Merriweather", serif;
+    font-family: "Merriweather", serif !important;
 }
 
 h2 {
