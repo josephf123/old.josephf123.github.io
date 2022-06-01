@@ -5,6 +5,10 @@ code {
     font-family: "Fira Mono";
 }
 
+body {
+    font-family: "Merriweather", serif;
+}
+
 h2 {
     color: blueviolet;
 }
