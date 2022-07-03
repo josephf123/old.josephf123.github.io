@@ -9,7 +9,17 @@
       <link>https://josephf123.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 16 May 2022 02:17:11 +0100</lastBuildDate><atom:link href="https://josephf123.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Jul 2022 02:17:11 +0100</lastBuildDate><atom:link href="https://josephf123.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vivisense: a new word</title>
+      <link>https://josephf123.github.io/posts/vivisense/</link>
+      <pubDate>Sun, 03 Jul 2022 02:17:11 +0100</pubDate>
+      
+      <guid>https://josephf123.github.io/posts/vivisense/</guid>
+      <description>Vivisense can be best described using the words “prompt” and “story”. When given a certain prompt, your brain creates a story around that.
+E.g the prompt could be “a vacation in Europe” and the vivisense is the story that your brain tells of the experience. Even though you might not know exactly what is going to happen, the gaps are filled in and a story is created about the vacation in Europe.</description>
+    </item>
+    
     <item>
       <title>Project Seasame Fox 🦊</title>
       <link>https://josephf123.github.io/posts/seasame_fox/</link>
