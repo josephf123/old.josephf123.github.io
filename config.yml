@@ -41,7 +41,7 @@ params:
   googleAnalyticsID: "G-RHCWKYCSSJ"
   
 
-  disqusShortname : "josephs-blog"
+  # disqusShortname : "josephs-blog"
 
   assets:
     # disableHLJS: true # to disable highlight.js
