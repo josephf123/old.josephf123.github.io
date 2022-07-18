@@ -9,7 +9,16 @@
       <link>https://josephf123.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 03 Jul 2022 02:17:11 +0100</lastBuildDate><atom:link href="https://josephf123.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Jul 2022 02:17:11 +0100</lastBuildDate><atom:link href="https://josephf123.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simulating gambling tactics</title>
+      <link>https://josephf123.github.io/posts/simulating_gambling/</link>
+      <pubDate>Mon, 18 Jul 2022 02:17:11 +0100</pubDate>
+      
+      <guid>https://josephf123.github.io/posts/simulating_gambling/</guid>
+      <description>Simulating gambling tactics TLDR: Gambling bad. If you have a LOT of money, you can win a SMALL amount of money with a high probability (but then you aren’t allowed to play ever again). This is a story about one time when I was and I stumbled upon a new domain of interest. This interest was related to gambling and it occured when a friend of mine told me of a “foolproof” betting stratergy for the game of roulette.</description>
+    </item>
+    
     <item>
       <title>Vivisense: a new word</title>
       <link>https://josephf123.github.io/posts/vivisense/</link>
