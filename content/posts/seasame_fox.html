@@ -28,7 +28,7 @@ This process took an extremely long amount of time. I had to find all the equipm
 
 I created a sketch of where all the parts would go, this would allow me to visualise where everything would go and help create dimensions for the device’s housing.<br>
 
-<img src="/static/seasame_fox/drawing%20schematic.jpeg" alt="Drawing schematic">
+<img src="/seasame_fox/drawing%20schematic.jpeg" alt="Drawing schematic">
 
 I had to boot an operating system called Kali Linux onto the raspberry pi to allow for the tools neccessary in wifi monitoring and hacking. On top of that I had to download a kernel that allowed for me to use wifi myself while scanning other network traffic.<br><br>
 
@@ -38,11 +38,11 @@ The housing for the device went through many iterations. I decided to use Fusion
 
 <i>Here is a photo of the iterations up until now</i>.
 
-<img src="/static/seasame_fox/all%20housings.jpg" alt="All housing">
+<img src="/seasame_fox/all%20housings.jpg" alt="All housing">
 
 <i>Here is the components combined inside its housing</i>
 
-<img src="/static/seasame_fox/all%20together.jpg" alt="All together">
+<img src="/seasame_fox/all%20together.jpg" alt="All together">
 
 <h2 style="color: #3864BC;"> Part 2: Writing the script </h2>
 
@@ -65,11 +65,11 @@ Next, I had to find a way to automate this process. Since I can’t run the devi
 
 My goal for this part was to have a simple interface that allows a user to see all the wifi devices that have been logged and also display its physical location. To achieve this goal, I used some simple HTML, Javascript and the Google Maps API. Once I had the data in a file on my computer, I converted the csv file into a json file (a format more friendly for the API), separated the data based on their location and then plotted in on an interactive map. When navigating the interface, clicking a marker makes all the information about that location pops up, including all the wifi devices, their device name, privacy protocol etc.
 
-<img src="/static/seasame_fox/all%20aps.png" alt="All Access Points on map">
+<img src="/seasame_fox/all%20aps.png" alt="All Access Points on map">
 
 Also, next to this is a table that contains every single wifi device (routers and clients). Not only this, but you can also search through all these devices to find specific information about the dataset i.e how many devices are Optus devices, which area has the most wifi devices or which devices have bad privacy protocols.
 
-<img src="/static/seasame_fox/blurred%20sc.png" alt="Table of all APs">
+<img src="/seasame_fox/blurred%20sc.png" alt="Table of all APs">
 
 <h2 style="color: #3864BC;"> Part 4: Actual hacking </h2>
 
