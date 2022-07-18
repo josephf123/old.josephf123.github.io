@@ -3,7 +3,11 @@ title: "Simulating gambling tactics"
 date: 2022-07-18T02:17:11+01:00
 draft: false
 ---
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Simulating gambling tactics</title></head>
+<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<title>Simulating gambling tactics</title></head>
 <body>
 	<h3>
 		TLDR: Gambling bad. If you have a LOT of money, you can win a SMALL amount of money with a high probability (but then you aren’t allowed to play ever again).
@@ -71,13 +75,11 @@ draft: false
 	<p>So I hit a dead end. You can’t use the Martingale tactic to make millions of dollars from casinos. Or can you???</p>
 	<p>I wanted to keep exploring this tactic by changing some of the parameters. The parameters were starting money M, what you do to the bet when the agent loses X (for example when doing double or nothing, X=2), and the win percentage.</p>
 	<p>Questions arose including: what would happen if I increase X, would it lead to more winnings, more volatile games? If I increase my win percentage, is their a way to guarantee increasing your money? How does increasing M affect my final winnings?</p>
-	<h3>Testing different values for M</h3>
-	<p>I created a function which tested different M values and their likelihood of doubling their money. For 15 different X values, I created the corresponding M value (2^x) (i.e for 2,4,8,16,…, 16384,32768) I then tested for each M, the probability that it would double their money. Looking at the experimental data, my hypothesis was wrong and in fact the amount of starting money you have will not impact yout chances of doubling your money.</p>
-	<h3>Testing different values for X</h3>
+	<h3>Testing different values of X</h3>
 	<p>Using my program, I attempted to change the value for X, making it triple or nothing, quadruple or nothing etc. Unfortunately, from this, nothing of value came. It did not lead to an increase of money, however when testing its affect against the number of bets placed before going bankrupt, this was the result</p>
 	<img src="/simulating_gambling/weird_graph.png" alt="weird graph">
 	<p>Where the X axis represents the X value, the Y axis represents the number of bets placed before losing (the start money was 5000). Interesting pattern, but nothing to do with increasing winnings.</p>
-	<h3>Testing different values for M</h3>
+	<h3>Testing different values of M</h3>
 	<p>
 		I created a function which tested different M values and their likelihood of doubling their money. For 15 different X values, I created the corresponding M value (2^x) (i.e for 2,4,8,16,…, 16384,32768) I then tested for each M, the probability that it would double their money. Looking at the experimental data, my hypothesis was wrong and in fact the amount of starting money you have will not impact yout chances of doubling your money.
 	</p>
@@ -91,9 +93,8 @@ draft: false
 	<p>z is what the agent does after losing (if z is 2, double or nothing, 3 is triple or nothing)</p>
 	<p></p>
 	<p>I first broke this problem down into its individual components. First, what is the probability of winning/losing a single game. For simplicity, we will have odds of 50/50 and so the probability of winning and losing is 0.50. Now, what is the probability of losing $x$ games in a row. The probability will be $0.5^x$. Therefore if you want the probability of not losing $x$ games in a row, it will be $1-0.5^x$. Now lets say you want to do this $z$ times. To do this successfully $z$ times, it will be $1-0.5^x \times 1-0.5^x$, z times. Therefore it will be $(1-0.5^x)^z$ where $z$ is the number of times you want to win. Now, the formula below represents the full equation with all the variables. Plotting this out gives this graph. </p>
-	![Test Image](/simulating_gambling/example_graph_1.png)
-	![Test Image](/simulating_gambling/example_graph_1.png)
-	<img src="/simulating_gambling/example_graph_1.png" alt="example 1">
+
+	<img src="/simulating_gambling/my_model_1.png" alt="example 1">
 	<h3>Some realisations</h3>
 	<p>No matter what I did, it seems if the odds are 50/50, there is no way to have an edge through leveraging your money or using a certain tactic. These are the rules of probability and it is not possible to "beat luck” and have a systematic method to improve your chances.</p>
 	<p>More research led me to Ed Thorpe’s article about the Martingale Tactic (http://www.edwardothorp.com/wp-content/uploads/2016/11/SystemsForRoulette_l.pdf) as well as a good book called The Theory of Gambling and Statistics (https://au1lib.org/book/702712/119692). In Chapter 3: The Basic Theorems, Epstein dispells the myth of the Maringale tactic working and reiterates what I have written here.</p>
