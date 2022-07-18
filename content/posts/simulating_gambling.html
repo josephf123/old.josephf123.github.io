@@ -91,6 +91,7 @@ draft: false
 	<p>z is what the agent does after losing (if z is 2, double or nothing, 3 is triple or nothing)</p>
 	<p></p>
 	<p>I first broke this problem down into its individual components. First, what is the probability of winning/losing a single game. For simplicity, we will have odds of 50/50 and so the probability of winning and losing is 0.50. Now, what is the probability of losing $x$ games in a row. The probability will be $0.5^x$. Therefore if you want the probability of not losing $x$ games in a row, it will be $1-0.5^x$. Now lets say you want to do this $z$ times. To do this successfully $z$ times, it will be $1-0.5^x \times 1-0.5^x$, z times. Therefore it will be $(1-0.5^x)^z$ where $z$ is the number of times you want to win. Now, the formula below represents the full equation with all the variables. Plotting this out gives this graph. </p>
+	![Test Image](/static/simulating_gambling/example_graph_1.png)
 	<img src="/static/simulating_gambling/example_graph_1.png" alt="example 1">
 	<h3>Some realisations</h3>
 	<p>No matter what I did, it seems if the odds are 50/50, there is no way to have an edge through leveraging your money or using a certain tactic. These are the rules of probability and it is not possible to "beat luck” and have a systematic method to improve your chances.</p>
@@ -100,7 +101,7 @@ draft: false
 	<p class="quote">If a gambler risks a finite capital over a large number of plays in a game with constant single-trial probabilities of winning, losing, and tying, then any and all betting systems lead ultimately to the same mathematical expectation of gain per unit amount wagered.</p>
 	<p>There is no way to beat a system where the “odds” are not in your favour. Although you may be able to win a few times, as you keep attempting the tactic, your chances of winning money will decrease as time goes on.</p>
 	<p>Give up. Don’t go to the casino.</p>
-	<h3>Appendix</h3>
+	<h2>Appendix</h2>
 	<p>Here’s a link to the code in python and in c++ if you want to play around</p>
 	<a href="https://github.com/josephf123/gamblingSimulator">https://github.com/josephf123/gamblingSimulator</a>
 	<img src="/static/simulating_gambling/weird_graph.png" alt="weird graph" >
