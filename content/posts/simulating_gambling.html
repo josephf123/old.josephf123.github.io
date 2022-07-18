@@ -69,7 +69,7 @@ draft: false
 	<p>No matter how lucky a person is, eventually the random walk will lead to the player having no money.</p>
 	<p>Understanding the maths a bit more, the agent starts with M money, this means they can lose log_2(M+1) times in a row before they go bankrupt, we will call this Z. e.g If the agent starts with $1023, this means they would lose all their money if they lost</p>
 	<p></p>
-	<p class="equation">Z=log_2(M+1)=log_2(1024)=10</p>
+	<p class="equation">$$Z=log_2(M+1)=log_2(1024)=10$$</p>
 	<p>times in a row </p>
 	<p>(This is because after losing once, you lose $1, then $2, $4, $8, $16, $32, $64, $128, $256, $512. Adding all these up, this means you will have lost $1023. Meaning it takes 10 losses in a row to go bankrupt)</p>
 	<p>So I hit a dead end. You can’t use the Martingale tactic to make millions of dollars from casinos. Or can you???</p>
@@ -85,7 +85,7 @@ draft: false
 	</p>
 	<h3>Modelling the probability</h3>
 	<p>I was curious how all these parameters affect the probability of winning, this is what I came up with. It actually doesn’t line up completely with experimental data though.</p>
-	<p class="equation">P = (1-(1-p)^x))^(z^x-1)</p>
+	<p class="equation">$$P = (1-(1-p)^x))^(z^x-1)$$</p>
 	<p>This equation is the full equation describing this phenomenon</p>
 	<p>P is the probability of z ing your money (if z is 2, doubling your money)</p>
 	<p>p is the probability of winning a single game</p>
@@ -100,7 +100,7 @@ draft: false
 	<p>More research led me to Ed Thorpe’s article about the Martingale Tactic (http://www.edwardothorp.com/wp-content/uploads/2016/11/SystemsForRoulette_l.pdf) as well as a good book called The Theory of Gambling and Statistics (https://au1lib.org/book/702712/119692). In Chapter 3: The Basic Theorems, Epstein dispells the myth of the Maringale tactic working and reiterates what I have written here.</p>
 	<h3>Conclusion</h3>
 	<p>As I was nearing the end of my research on this topic, I was reading a book about gambling and in it, it said</p>
-	<p class="quote">If a gambler risks a finite capital over a large number of plays in a game with constant single-trial probabilities of winning, losing, and tying, then any and all betting systems lead ultimately to the same mathematical expectation of gain per unit amount wagered.</p>
+	<p class="quote"><i>If a gambler risks a finite capital over a large number of plays in a game with constant single-trial probabilities of winning, losing, and tying, then any and all betting systems lead ultimately to the same mathematical expectation of gain per unit amount wagered.</i></p>
 	<p>There is no way to beat a system where the “odds” are not in your favour. Although you may be able to win a few times, as you keep attempting the tactic, your chances of winning money will decrease as time goes on.</p>
 	<p>Give up. Don’t go to the casino.</p>
 	<h2>Appendix</h2>
@@ -119,12 +119,12 @@ draft: false
 	</ul>
 	<p></p>
 	<p>For the function:</p>
-	<p class="equation">P = (1-(1-p)^x))^(z^x-1)</p>
+	<p class="equation">$$P = (1-(1-p)^x))^(z^x-1)$$</p>
 	<img src="/simulating_gambling/my_model_1.png" alt="my model 1">
 	<img src="/simulating_gambling/my_model_2.png" alt="my model 2">
 	<p>Depending on the parameters, the graph will either have an asymptote at 1, 0 or 1/e.</p>
 	<p>It seems there is a pattern for when the graph has an asymptote at 1/e.</p>
-	<p class="equation">p = 1 - \frac{1}{z}</p>
+	<p class="equation">$$p = 1 - \frac{1}{z}$$</p>
 	<p>If p > 1 - 1/z, the odds will converge to 100% and if p < 1 - 1/z the odds will go down to 0%.</p>
 
 
