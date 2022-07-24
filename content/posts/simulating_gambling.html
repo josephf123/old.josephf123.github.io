@@ -12,7 +12,7 @@ draft: false
 	<p>This is a story about one time when I was and I stumbled upon a new domain of interest. This interest was related to gambling and it occured when a friend of mine told me of a “foolproof” betting strategy for the game of roulette.</p>
 
 	<h3>The gambling strategy</h3>
-	<p>For any games where there is a near 50% chance of winning and where winning doubles your money and losing loses all your money you do this: First bet $1, if you lose this bet instead of betting $1, you bet $2 (double the previous bet), if you lose again, bet $4, then $8 etc. If you win however, you restart the betting number and bet $1 again.</p>
+	<p>For any games where there is a near 50% chance of winning and where winning doubles your money and losing loses all your money you do this: First bet $1, if you lose this bet instead of betting $1, on the next turn you bet $2 (double the previous bet), if you lose again, bet $4, then $8 etc. If you win however, you restart the betting number and bet $1 again.</p>
 	<p>So the tactic is basically double-down each time you lose. In the above scenario, if you lose the first bet, you are down $1, if you lose the second bet you are then down $3 ($2 + $1), if you lose the next bet you are down $7 ($4 + $2 + $1) etc. Whenever you win, assuming you eventually win, you will be net positive. For example if you were down $3 and you then bet $4, you would then be up $1 in total. Below there is a table to illustrate this:</p>
 
 	<table>
@@ -81,7 +81,7 @@ draft: false
 		I created a function which tested different M values and their likelihood of doubling their money. For 15 different X values, I created the corresponding M value (\(2^x\)) (i.e for 2,4,8,16,…, 16384,32768) I then tested for each M, the probability that it would double their money. Looking at the experimental data, my hypothesis was wrong and in fact the amount of starting money you have will not impact yout chances of doubling your money.
 	</p>
 	<h3>Modelling the probability</h3>
-	<p>I was curious how all these parameters affect the probability of winning, this is what I came up with. It actually doesn’t line up completely with experimental data though.</p>
+	<p>I was curious how all these parameters affect the probability of winning, this is what I came up with. It doesn’t line up completely with experimental data though.</p>
 	<p class="equation">$$P = (1-(1-p)^x))^(z^x-1)$$</p>
 	<p>This equation is the full equation describing this phenomenon</p>
 	<p>P is the probability of z ing your money (if z is 2, doubling your money)</p>
